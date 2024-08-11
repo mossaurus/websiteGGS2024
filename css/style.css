@@ -48,7 +48,7 @@ a {
     text-decoration: none;
 }
 p {
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 
@@ -92,7 +92,7 @@ tr:first-child {
 }
 
 .secondary-500-bg {
-    background-color: #DDF2FD !important;
+    background-image: linear-gradient(#C6EBC5, #FEFDED); 
 }
 
 
@@ -135,8 +135,14 @@ tr:first-child {
 .teks {
     padding: 10px;
 }
-.web {
-    background-color: #225672 !important;
-    padding: 0%;
-    margin: 0%;
-}
+/* navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* to ensure it's on top of other elements */
+  }
+  nav {
+    background-image: linear-gradient(#2a943b, #c4d5df);
+ }
