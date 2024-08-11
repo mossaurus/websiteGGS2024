@@ -15,255 +15,174 @@
 <body>
 
     <!-- HEADER -->
-     <!-- HEADER -->
-     <header>
+    <!-- HEADER -->
+    <header>
 
         <nav class="navbar navbar-expand-lg navbar-light primary-500-bg">
-            <a class="navbar-brand" href="/index.html">
-                <img src="./img/logo-official-removebg-preview.png" alt="" class="img-fluid" style="width: 200px; padding-left: 20px; height: 70px;">
+            <a class="navbar-brand" href="../websiteGGS2024/index.html">
+                <img src="./img/logo-official-removebg-preview.png" alt="" class="img-fluid"
+                    style="width: 200px; padding-left: 20px; height: 70px;">
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="padding-right: 100px;">
                 <ul class="navbar-nav flex-wrap">
                     <li class="nav-item active">
-                        <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500" href="../websiteGGS2024/index.html">Home <span class="sr-only">(current)</span></a>
+                        <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500"
+                            href="../websiteGGS2024/index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500" href="../websiteGGS2024/pages/about-us.html">About Us</a>
+                        <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500"
+                            href="../pages/about-us.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500" href="/websiteGGS2024/pages/gallery.html">Kombinasi 5S</a>
+                        <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500"
+                            href="../pages/gallery.html">Kombinasi 5S</a>
                     </li>
                     <li class="nav-item">
-                        <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500" href="/websiteGGS2024/pages/leaderboards.html">Article</a>
+                        <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500"
+                            href="../pages/leaderboards.html">Article</a>
                     </li>
                     <li class="nav-item">
-                        <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500" href="/websiteGGS2024/pages/learning-material.html">Tips</a>
+                        <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500"
+                            href="../pages/learning-material.html">Tips</a>
                     </li>
                 </ul>
             </div>
         </nav>
 
-        <!-- JUMBOTRON -->
         <div class="jumbotron jumbotron-fluid">
-            <img src="img/Thumbnail.jpeg" alt="" class="img-fluid" style="width:100%">
-            <div class="position-absolute" style="bottom: 200px ; left: 10px ;">
-                <img src="img/Title Tepdev.png" alt="" class="img-fluid" style="width: 25%">
-                <div class="position-absolute" style="bottom: -25px ; left: 50px ;">
-                    <h5 class="secondary-500">"Empowering Futures, Igniting Minds: Visioner Technology Extracurricular - Where Innovation Meets Imagination!"</h5>
-                </div>
+            <div class="container">
+                <img src="../websiteGGS2024/img/1.jpg" alt="Image" class="img-fluid mb-3">
+              <p class="lead">This is a responsive Jumbotron example.</p>
             </div>
-        </div>
+          </div>
     </header>
 
 
     <style>
-         
+        /* CSS */
+        /* CSS */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-gap: 10px;
+            
+        }
+
+        .column {
+            background-color: #f7f7f7;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 10px;
+            /* Add curved corner borders */
+            overflow: hidden;
+            /* Add this to prevent the image from overflowing the curved border */
+            
+        }
+
+        .column img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 10px;
+
+        }
+
+        .column h3 {
+            margin-top: 0;
+            font-size: 1.2em;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        /* CSS */
+.jumbotron {
+  background-color: #f5f5f5;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem;
+  border-radius: 0.3rem;
+}
+
+/* Make it responsive */
+@media (min-width: 576px) {
+  .jumbotron {
+    padding: 4rem 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding: 6rem 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .jumbotron {
+    padding: 8rem 4rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .jumbotron {
+    padding: 10rem 5rem;
+  }
+}
     </style>
 
     <!-- CONTENT -->
     <!-- SECTION 5S -->
-    
 
 
-        <div id="area-title-squad" class="secondary-500 d-flex justify-content-center " style="padding-top: 20px;">
-            <h1>Kombinasi 5S</h1>
+    <div class="container">
+        <div class="column" style="padding-top: 10px; padding-bottom: 10px;">
+            <img src="image1.jpg" alt="Image 1">
+            <h3 style="font-size: 1.2em;">Sehat Fisik</h3>
+            <p>Sehat fisik berarti tubuh berfungsi optimal, bebas dari penyakit dan cedera, yang dapat dicapai melalui
+                pola makan sehat, olahraga teratur, dan istirahat cukup.</p>
         </div>
-            <div class="d-flex gap-2">
-                <div class="secondary-500-bg text-center w-100 rounded-4">
-                    <img src="img/robotic-arm_11260776.png" alt="" style="width: 50%; padding-top: 30px; height: 46%;">
-                &nbsp;
-                <h2>
-                    <a href="/websiteGGS2024/pages/robotic.html">
-                        <b>Sehat fisik</b>
-                    </a>
-                </h2>
-                <p style="text-align: justify; padding-bottom: 10px;">Robotik merupakan inti inovasi di dalam organisasi
-                    kami, menjadi pangkalan bagi eksplorasi dan pengembangan teknologi canggih yang membentuk masa
-                    depan. Dalam ruang ini, para penggemar robotika berkumpul untuk merancang, menguji, dan
-                    mengimplementasikan Internet Of Things.
-                </p>
-                </div>
-                <div class="secondary-500-bg text-center w-100 rounded-4">
-                    <img src="img/programming_6062646.png" alt="" style="width: 50%; padding-top: 30px; height: 46%;">
-                    &nbsp;
-                    <h2>
-                        <a href="./websiteGGS2024/pages/learning-material.html">
-                            <B>Sehat Imunisasi</B>
-                        </a>
-                    </h2>
-                    <p style="padding: 10px; text-align: justify;">Programming merupakan salah satu divisi atau squad di
-                        dalam TEPDEV yang berfokus pada pengembangan web (Web Development). Di dalam divisi ini, para
-                        anggota akan belajar mengenai berbagai aspek penting dalam pengembangan web.
-                    </p>
-                </div>
-                <div class="secondary-500-bg text-center w-100 rounded-4">
-                    <img src="img/vid.jpg" alt="" style="width: 50%;  padding-top: 30px; height: 46%;"> &nbsp;
-                    <h2>
-                        <a href="/websiteGGS2024/pages/VideoEditing.html">
-                            <B>Sehat Lingkungan</B>
-                        </a>
-                    </h2>
-                    <p style="padding: 10px; text-align: justify;">Video Editing merupakan salah satu divisi di TEPDEV
-                        yang memiliki fokus utama pada pembelajaran dan praktik dalam pembuatan video berkualitas
-                        tinggi, serta pengisian konten-konten yang kreatif untuk platform media sosial TEPDEV itu
-                        sendiri.
-                    </p>
-                </div>
-                <div class="secondary-500-bg text-center w-100 rounded-4">
-                    <img src="img/vid.jpg" alt="" style="width: 50%;  padding-top: 30px; height: 46%;"> &nbsp;
-                    <h2>
-                        <a href="/websiteGGS2024/pages/VideoEditing.html">
-                            <B>Sehat Gizi</B>
-                        </a>
-                    </h2>
-                    <p style="padding: 10px; text-align: justify;">Video Editing merupakan salah satu divisi di TEPDEV
-                        yang memiliki fokus utama pada pembelajaran dan praktik dalam pembuatan video berkualitas
-                        tinggi, serta pengisian konten-konten yang kreatif untuk platform media sosial TEPDEV itu
-                        sendiri.
-                    </p>
-                </div>
-                <div class="secondary-500-bg text-center w-100 rounded-4">
-                    <img src="img/desain.jpg" alt="" style="width: 50%; padding-top: 30px; height: 46%;"> &nbsp;
-                    <h2 style="padding-bottom: 5px;">
-                        <a href="/websiteGGS2024/pages/GraphicDesign.html">
-                            <b>Sehat Jiwa</b>
-                        </a>
-                    </h2>
-                    <p style="padding: 10px; text-align: justify;">Desain Grafis adalah salah satu divisi di TEPDEV yang
-                        memiliki tanggung jawab utama dalam menciptakan berbagai karya seni digital, termasuk pembuatan
-                        logo, poster presentasi, karya seni digital, dan lain sebagainya.
-                    </p>
-                </div>
-            </div>
+        <div class="column">
+            <img src="image2.jpg" alt="Image 2">
+            <h3 style="font-size: 1.2em;">Sehat Jiwa</h3>
+            <p>Kesehatan mental meliputi keseimbangan emosi dan pikiran, kemampuan mengatasi stres, dan membangun
+                hubungan sosial yang positif.</p>
         </div>
-
-    </section>
-
-    <!-- SECTION ROCKET -->
-    <section class="grad p-3">
-
-        <div class="container">
-            <div id="area-title-squad" class="secondary-500 d-flex flex-column">
-                <div class="row" style="padding-top: 50px;">
-                    <div class="col-3 text-center">
-                        <h1>ROCKET</h1>
-                        <img src="img/Rocket.svg" class="img-fluid">
-                    </div>
-
-                    <div class="col-9 ">
-                        <!-- Responsibility -->
-                        <div>
-                            <h4>Responsibility</h4>
-                            <p>Siswa dinilai berdasarkan kemampuan mereka dalam mengambil inisiatif, menjalankan tugas
-                                dengan penuh tanggung jawab, dan bertanggung jawab terhadap pekerjaan yang mereka
-                                lakukan.</p>
-                        </div>
-
-                        <!-- Organize -->
-                        <div>
-                            <h4>Organize</h4>
-                            <p>Dalam kategori ini, siswa dinilai berdasarkan kemampuan mereka dalam merencanakan
-                                pekerjaan, mengatur waktu dengan efisien, dan menyusun ide dan informasi dengan
-                                terstruktur.</p>
-                        </div>
-
-                        <!-- Collaboration -->
-                        <div>
-                            <h4>Collaboration</h4>
-                            <p>Penilaian pada kolaborasi mencakup kemampuan siswa untuk bekerja sama dengan orang lain,
-                                mendengarkan pendapat orang lain, dan berkontribusi dalam tim dengan positif.</p>
-                        </div>
-
-                        <!-- Kindness -->
-                        <div>
-                            <h4>Kindness</h4>
-                            <p>Aspek kebaikan menilai perilaku empati dan penghargaan terhadap perasaan orang lain.
-                                Siswa dinilai berdasarkan sikap mereka terhadap teman sekelas, guru, dan anggota
-                                komunitas lainnya. </p>
-                        </div>
-
-                        <!-- Emphatize -->
-                        <div>
-                            <h3>Emphatize</h3>
-                            <p>Empati mengacu pada kemampuan siswa untuk memahami dan merasakan perasaan orang lain.
-                                Siswa yang berempati mampu mendengarkan dengan penuh perhatian, mengenali emosi orang
-                                lain, dan memberikan dukungan dan pengertian ketika diperlukan. </p>
-                        </div>
-
-                        <!-- Thinker -->
-                        <div>
-                            <h3>Thinker</h3>
-                            <p>Dalam aspek berpikir kritis, siswa dinilai berdasarkan kemampuan mereka dalam
-                                menganalisis informasi, mengevaluasi argumen, dan mengambil keputusan yang bijaksana.
-                            </p>
-                        </div>
-                    </div>
-
-
-                </div>
-            </div>
-
+        <div class="column">
+            <img src="image3.jpg" alt="Image 3">
+            <h3 style="font-size: 1.2em;">Sehat Gizi</h3>
+            <p> Kondisi di mana seseorang mendapatkan nutrisi yang cukup dan seimbang dari makanan yang dikonsumsi untuk
+                menjaga kesehatan tubuh.</p>
+        </div>
+        <div class="column">
+            <img src="image4.jpg" alt="Image 4">
+            <h3 style="font-size: 1.2em;">Sehat Lingkungan</h3>
+            <p>Lingkungan yang bersih dan sehat juga mendukung kesehatan secara keseluruhan</p>
+        </div>
+        <div class="column">
+            <img src="image5.jpg" alt="Image 5">
+            <h3 style="font-size: 1.2em;">Sehat Imnunisasi</h3>
+            <p> Kondisi di mana seseorang telah mendapatkan semua vaksin yang diperlukan untuk melindungi tubuh dari
+                penyakit menular.</p>
+        </div>
+    </div>
     </section>
 
 
-    <!-- SECTION OUR CREATION -->
-    <!-- <section class="tertiary-500-bg ">
-        &nbsp;
-        <div id="area-title-squad " class="secondary-500 d-flex justify-content-center ">
-            <h1>OUR CREATION</h1>
-        </div>
 
-        <div class="container-fluid ">
-            <div class="d-flex gap-2 ">
-                <div class="secondary-500-bg text-center w-100 rounded-4 ">
-                    <img src="img/kegiatanprogramming.png" alt=" " style="width: 100%; border-radius: 4%; "> &nbsp;
-                    <h2>
-                        <B>Programming</B>
-                    </h2>
-                    <p>Potret Divisi Programming, tempat di mana para pengembang muda dengan semangat tinggi belajar dan
-                        berkarya untuk membawa konsep-konsep kreatif menjadi kenyataan di dunia maya. Saat ini, fokus
-                        kami adalah menghasilkan website inovatif yang mencerminkan esensi "Our Creation" kami.
-                    </p>
-                </div>
-                <div class="secondary-500-bg text-center w-100 rounded-4 ">
-                    <img src="img/kegiatanvidet.png" alt=" " style="width: 100%; border-radius: 4%; "> &nbsp;
-                    <h2>
-                        <B>Video Editing</B>
-                    </h2>
-                    <p>Potret Divisi Video Editing, tempat di mana kreativitas bertemu teknologi untuk menciptakan
-                        karya-karya visual yang menginspirasi. Dalam perjalanan pembelajaran pembuatan video kami,
-                        setiap langkah adalah petualangan menuju kemahiran yang lebih tinggi dan ekspresi seni yang
-                        lebih mendalam.
-                    </p>
-                </div>
-                <div class="secondary-500-bg text-center w-100 rounded-4 ">
-                    <img src="img/kegiatandesaingrafis.png" alt=" " style="width: 100%; border-radius: 4%; "> &nbsp;
-                    <h2>
-                        <b>Design Graphic</b>
-                    </h2>
-                    <p>Potret Divisi Desain Grafis sedang menggelar diskusi penuh semangat untuk menghasilkan konsep
-                        desain yang memukau. Suasana penuh inspirasi dan kegembiraan terpancar dari meja-meja kerja yang
-                        dipenuhi dengan sketsa, warna, dan ide-ide inovatif.
-                    </p>
-
-                </div>
-                <div class="secondary-500-bg text-center w-100 rounded-4 ">
-                    <img src="img/kegiatanrobotik.png" alt=" " style="width: 100%; border-radius: 4%; "> &nbsp;
-                    <h2>
-                        <b>Robotik</b>
-                    </h2>
-                    <p>Potret Karya bagian Robotik kami, di mana kecanggihan bertemu dengan kepraktisan. Gambar
-                        terlampir mengungkapkan sebuah karya masterpiece, yaitu "Pintu Kunci RFID dengan Arduino".
-                        Keajaiban teknologi yang memadukan kreativitas dan fungsionalitas.
-                    </p>
-
-                </div>
-            </div>
-        </div>
-    </section> -->
 
     <!-- SECTION ARTICLE -->
     <section class="fortiary-500-bg " style="padding-top: 30px;">
@@ -371,12 +290,12 @@
                         </p>
                     </div>
                     <div class="fortiary-500-bg text-center col-lg-6 "> -->
-                        <!-- <video style="width: 100%; border-radius: 7%; padding-top: 20px;" controls>
+    <!-- <video style="width: 100%; border-radius: 7%; padding-top: 20px;" controls>
                             <source src="img/hasil-VE.mp4" type="video/mp4">
                             <source src="img/hasil-VE-audio.mp3" type="video/mp3">
                           Your browser does not support the video tag.
                           </video> -->
-                        <!-- <iframe width="700" height="360" src="https://www.youtube.com/embed/J4AWorqlKoU"
+    <!-- <iframe width="700" height="360" src="https://www.youtube.com/embed/J4AWorqlKoU"
                             title="Film Memori Membisu" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="border-radius: 7%;"></iframe>
@@ -418,34 +337,40 @@
 
     <!-- FOOTER -->
     <footer>
-		<div class="container-fluid bg-black" style="color: aliceblue;">
-			<div class="row" style="padding: 100px; padding-bottom: 30px; padding-top: 70px;">
-				<div class="col-4">
-					<h3>Contact Us</h3>
-					<P style="font-size: 1.5em">Our Instagram :</P>
-					<a href="https://www.instagram.com/tepdev23/" style="display: inline;">
-						<p style="font-size: 1.5em">@Tepdev23</p>
-					</a>
-					<p style="font-size: 1.5em">Our Email :
-						<a href="mailto: tepdev23@gmail.com">
-							<p style="font-size: 1.5em">Tepdev23@gmail.com</p>
-						</a>
-					</p>
-				</div>
-				<div class="col-8 text-left">
-					<h3>About Our Extracurricular</h3>
-					<p style="font-size: 1.3em">TEPDEV merupakan ekstrakurikuler yang telah ada sejak tahun 2022 yang berada di kampus SMAN 23 Bandung, dengan tujuan utama mendirikan wadah bagi siswa untuk meningkatkan pemahaman dan minat mereka dalam berbagai aspek teknologi. Eskul ini didirikan dengan fokus yang kuat pada pengembangan keterampilan teknologi, memungkinkan siswa untuk terlibat dalam proyek-proyek inovatif yang meliputi bidang-bidang seperti Video Editing, Desain Grafis, Robotik, dan Programming, sehingga mendorong mereka untuk menjadi lebih terampil dan kreatif dalam menggunakan teknologi modern.</p>
-					<p style="font-size: 1.3em">If you interested with us, let us know! <br>
-						<br>
-						Thank you!
-					</p>
-				</div>
-			</div>
-			<div class="row text-center" style="padding-bottom: 50px; margin-top: 50px;">
-				<h5>&copy; Copyright Tepdev 2024</h5>
-			</div>
-		</div>
-	</footer>
+        <div class="container-fluid bg-black" style="color: aliceblue;">
+            <div class="row" style="padding: 100px; padding-bottom: 30px; padding-top: 70px;">
+                <div class="col-4">
+                    <h3>Contact Us</h3>
+                    <P style="font-size: 1.5em">Our Instagram :</P>
+                    <a href="https://www.instagram.com/tepdev23/" style="display: inline;">
+                        <p style="font-size: 1.5em">@Tepdev23</p>
+                    </a>
+                    <p style="font-size: 1.5em">Our Email :
+                        <a href="mailto: tepdev23@gmail.com">
+                            <p style="font-size: 1.5em">Tepdev23@gmail.com</p>
+                        </a>
+                    </p>
+                </div>
+                <div class="col-8 text-left">
+                    <h3>About Our Extracurricular</h3>
+                    <p style="font-size: 1.3em">TEPDEV merupakan ekstrakurikuler yang telah ada sejak tahun 2022 yang
+                        berada di kampus SMAN 23 Bandung, dengan tujuan utama mendirikan wadah bagi siswa untuk
+                        meningkatkan pemahaman dan minat mereka dalam berbagai aspek teknologi. Eskul ini didirikan
+                        dengan fokus yang kuat pada pengembangan keterampilan teknologi, memungkinkan siswa untuk
+                        terlibat dalam proyek-proyek inovatif yang meliputi bidang-bidang seperti Video Editing, Desain
+                        Grafis, Robotik, dan Programming, sehingga mendorong mereka untuk menjadi lebih terampil dan
+                        kreatif dalam menggunakan teknologi modern.</p>
+                    <p style="font-size: 1.3em">If you interested with us, let us know! <br>
+                        <br>
+                        Thank you!
+                    </p>
+                </div>
+            </div>
+            <div class="row text-center" style="padding-bottom: 50px; margin-top: 50px;">
+                <h5>&copy; Copyright Tepdev 2024</h5>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
