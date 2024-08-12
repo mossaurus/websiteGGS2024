@@ -35,24 +35,23 @@
                     </li>
                     <li class="nav-item">
                         <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500"
-                            href="../websiteGGS2024/pages/about-us.html">About Us</a>
+                            href="../pages/about-us.html">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500"
-                            href="../websiteGGS2024/pages/learning-material.html">Kombinasi 5S</a>
+                            href="../pages/sehat fisik.html">Kombinasi 5S</a>
                     </li>
                     <li class="nav-item">
                         <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500"
-                            href="../websiteGGS2024/pages/gallery.html">Article</a>
+                            href="../pages/gallery.html">Article</a>
                     </li>
                     <li class="nav-item">
                         <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500"
-                            href="../websiteGGS2024/pages/leaderboards.html">Tips</a>
+                            href="../pages/leaderboards.html">Tips</a>
                     </li>
                 </ul>
             </div>
         </nav>
-
 
 
 	<!-- JUMBOTRON -->
@@ -61,76 +60,57 @@
 	</div>
 	</header>
 	<style>
-		.web {
-			background-color: #225672 !important;
-			padding: 0%;
-			margin: 0%;
+		.container {
+		  display: flex;
+		  flex-wrap: wrap;
+		  justify-content: space-between;
+		}
+		
+		.column {
+		  flex-basis: 18%; /* 20% of the container width */
+		  margin: 10px;
+		  background-color: #f0f0f0;
+		  padding: 20px;
+		  border: 1px solid #ddd;
+		}
+		
+		/* Responsive design for smartphones */
+		@media only screen and (max-width: 300px) {
+		  .column {
+			flex-basis: 50%; /* 50% of the container width on smartphones */
+		  }
 		}
 	</style>
 	<!-- CONTENT -->
-	<section class="p-4 d-flex flex-column align-items-center secondary-500-bg">
-		<h1>Learning Material</h1>
-		<nav class="d-flex gap-4">
-			<!-- <ul class="">
-							<li><a href="programming.html"><a>
-										<image src="../img/web-programming.png" Width="150"></image>
-									</a>
-							<li><a href="VideoEditing.html"><a>
-										<image src="../img/video-editor.png" width="150" />
-							</li>
-							<li><a href="VideoEditing.html"><a>
-										<image src="../img/web-design.png" width="150" />
-							</li>
-						</ul> -->
-			<div style="color: aliceblue;"
-				class="gap-3 rounded-3 p-3 primary-500-bg w-100 d-flex align-items-center justify-content-center">
-				<a class="WebDev" href="learning-material.html"><i class="fa-solid fa-laptop-code"
-						style="font-size:100px"></i></a>
-				<div>
-					<h1>WebDev</h1>
-					<p>HTML, CSS, JavaScript</p>
-				</div>
-			</div>
-			<div style="color: aliceblue;"
-				class="gap-3 rounded-3 p-3 tertiary-500-bg w-100 d-flex align-items-center justify-content-center">
-				<a class="Video Editing" href="VideoEditing.html"><i class="fa fa-film" style="font-size:100px"></i></a>
-				<div>
-					<h1> Video Editing</h1>
-					<p>Premiere Pro, After Effects</p>
-
-				</div>
-			</div>
-			<div style="color: aliceblue;"
-				class="gap-3 rounded-3 p-3 primary-500-bg w-100 d-flex align-items-center justify-content-center">
-				<a class="Graphic Design" href="GraphicDesign.html"><i class="fa fa-paint-brush"
-						style="font-size:100px"></i></a>
-				<div>
-					<h1>Graphic Design</h1>
-					<p> Canva</p>
-
-				</div>
-
-			</div>
-			<div style="color: aliceblue;"
-				class="gap-3 rounded-3 p-3 primary-500-bg w-100 d-flex align-items-center justify-content-center">
-				<a class="Graphic Design" href="robotic.html"><i class="fa-solid fa-robot"
-						style="font-size:100px"></i></a>
-				<div>
-					<h1>Robotic</h1>
-					<p>Scracth, Arduino, Altium</p>
-
-				</div>
-
-			</div>
-		</nav>
-	</section>
-	<section class="text-center">
-		<div class="container-fluid primary-500-bg">
-			<div style="color:aliceblue;" class="row">
-				<h1 style="padding: 15px;">Web Development</h1>
-			</div>
+	<!-- HTML -->
+<div class="container">
+	<div class="column">
+		<a href="../pages/learning-material.html"></a>
 		</div>
-	</section>
+	<div class="column">
+		<a href="../pages/VideoEditing.html"> column</a>
+		</div>
+	<div class="column">
+		<a href="../pages/GraphicDesign.html"></a>
+		</div>
+	<div class="column">
+		<a href="../pages/robotic.html"></a>
+		</div>
+	<div class="column">
+		<a href="../pages/"></a>
+		</div>
+  </div>
+  
+  <!-- CSS -->
+	  </section>
+	  
+	  <section class="text-center">
+		<div class="container-fluid primary-500-bg">
+		  <div style="color:aliceblue;" class="row">
+			<h1 style="padding: 15px;">Web Development</h1>
+		  </div>
+		</div>
+	  </section>
 	<section class="web">
 		<section class="container">
 			<div class="align-items-center justify-content-center">
