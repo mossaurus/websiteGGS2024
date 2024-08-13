@@ -10,6 +10,7 @@
 
     <!-- Import CSS Custom -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bmi.css">
 </head>
 
 <body>
@@ -134,65 +135,64 @@
     <!-- SECTION ROCKET -->
     <section class="grad p-3">
 
-        <div class="container">
-            <div id="area-title-squad" class="secondary-500 d-flex flex-column">
-                <div class="row">
-                    <div class="col-3 text-center">
-                        <h1>ROCKET</h1>
-                        <img src="img/Rocket.svg" class="img-fluid">
-                    </div>
-
-                    <div class="col-9 ">
-                        <!-- Responsibility -->
-                        <div>
-                            <h4>Responsibility</h4>
-                            <p>Siswa dinilai berdasarkan kemampuan mereka dalam mengambil inisiatif, menjalankan tugas
-                                dengan penuh tanggung jawab, dan bertanggung jawab terhadap pekerjaan yang mereka
-                                lakukan.</p>
-                        </div>
-
-                        <!-- Organize -->
-                        <div>
-                            <h4>Organize</h4>
-                            <p>Dalam kategori ini, siswa dinilai berdasarkan kemampuan mereka dalam merencanakan
-                                pekerjaan, mengatur waktu dengan efisien, dan menyusun ide dan informasi dengan
-                                terstruktur.</p>
-                        </div>
-
-                        <!-- Collaboration -->
-                        <div>
-                            <h4>Collaboration</h4>
-                            <p>Penilaian pada kolaborasi mencakup kemampuan siswa untuk bekerja sama dengan orang lain,
-                                mendengarkan pendapat orang lain, dan berkontribusi dalam tim dengan positif.</p>
-                        </div>
-
-                        <!-- Kindness -->
-                        <div>
-                            <h4>Kindness</h4>
-                            <p>Aspek kebaikan menilai perilaku empati dan penghargaan terhadap perasaan orang lain.
-                                Siswa dinilai berdasarkan sikap mereka terhadap teman sekelas, guru, dan anggota
-                                komunitas lainnya. </p>
-                        </div>
-
-                        <!-- Emphatize -->
-                        <div>
-                            <h3>Emphatize</h3>
-                            <p>Empati mengacu pada kemampuan siswa untuk memahami dan merasakan perasaan orang lain.
-                                Siswa yang berempati mampu mendengarkan dengan penuh perhatian, mengenali emosi orang
-                                lain, dan memberikan dukungan dan pengertian ketika diperlukan. </p>
-                        </div>
-
-                        <!-- Thinker -->
-                        <div>
-                            <h3>Thinker</h3>
-                            <p>Dalam aspek berpikir kritis, siswa dinilai berdasarkan kemampuan mereka dalam
-                                menganalisis informasi, mengevaluasi argumen, dan mengambil keputusan yang bijaksana.
-                            </p>
-                        </div>
-                    </div>
-
-
+        <body>
+            <div class="container">
+              <h1>Kalkulator BMI</h1>
+        
+              <form class="calculator">
+                <div>
+                  <label for="weight">Berat badan (kg)</label>
+                  <input type="number" id="weight" min="0" step="0.01" value="0" />
                 </div>
+        
+                <div>
+                  <label for="height">Tinggi (cm)</label>
+                  <input type="number" id="height" min="0" step="0.01" value="0" />
+                </div>
+        
+                <div>
+                  <label for="label">Jenis Kelamin</label>
+                        <select type="input" id="gender" required>
+                            <option value="">Pilih Jenis Kelamin</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                </div>
+        
+                <div>
+                  <button type="reset">Cek ulang</button>
+                  <button type="submit">Hitung BMI</button>
+                </div>
+              </form>
+        
+              <section class="output">
+                <h3>hasil BMI</h3>
+                <p id="bmi">0</p>
+                <p id="desc"></p>
+              </section>
+        
+              <section class="bmi-scale">
+                <div style="--color: var(--underweight)">
+                  <h4>Berat rendah</h4>
+                  <p>&lt; 18.5</p>
+                </div>
+        
+                <div style="--color: var(--normal)">
+                  <h4>Berat Normal</h4>
+                  <p>18.5 – 25</p>
+                </div>
+        
+                <div style="--color: var(--overweight)">
+                  <h4>Berat Berlebih</h4>
+                  <p>25 – 30</p>
+                </div>
+        
+                <div style="--color: var(--obese)">
+                  <h4>Berat Obeseitas</h4>
+                  <p>≥ 30</p>
+                  
+                </div>
+              </section>
             </div>
 
     </section>
@@ -436,6 +436,53 @@
 		</div>
 	</footer>
 
+    <!--script BMI-->
+    <script>
+            const bmiText = document.getElementById("bmi");
+            const descText = document.getElementById("desc");
+            const form = document.querySelector("form");
+
+            form.addEventListener("submit", onFormSubmit);
+            form.addEventListener("reset", onFormReset);
+
+            function onFormReset() {
+            bmiText.textContent = 0;
+            bmiText.className = "";
+            descText.textContent = "N/A";
+            }
+
+            function onFormSubmit(e) {
+            e.preventDefault();
+
+            const weight = parseFloat(form.weight.value);
+            const height = parseFloat(form.height.value);
+
+            if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+                alert("Please enter a valid weight and height");
+                return;
+            }
+
+            const heightInMeters = height / 100; // cm -> m
+            const bmi = weight / Math.pow(heightInMeters, 2);
+            const desc = interpretBMI(bmi);
+
+            bmiText.textContent = bmi.toFixed(2);
+            bmiText.className = desc;
+            descText.innerHTML = `You are <strong>${desc}</strong>`;
+            }
+
+            function interpretBMI(bmi) {
+            if (bmi < 18.5) {
+                return "underweight";
+            } else if (bmi < 25) {
+                return "healthy";
+            } else if (bmi < 30) {
+                return "overweight";
+            } else {
+                return "obese";
+            }
+            }
+    </script>
 </body>
 
 </html>
