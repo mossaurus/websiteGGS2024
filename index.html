@@ -11,60 +11,315 @@
     <!-- Import CSS Custom -->
     <link rel="stylesheet" href="css/style.css">
 </head>
+<style>
+    .card {
+        height: 80%;
+        padding-top: 5px 
+    }
+    .card img {
+        height: 70%;
+        padding-top: 50px;
+    }
+    @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap");
 
+:root {
+  --underweight: orange;
+  --normal: green;
+  --overweight: lightcoral;
+  --obese: crimson;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Jost", sans-serif;
+}
+
+body {
+  height: 200vh;
+}
+
+.h1-bmi {
+  text-align: center;
+}
+
+.container-bmi {
+  width: 90%;
+  max-width: 420px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.25);
+  display: grid;
+  gap: 1rem;
+
+}
+
+.calculator {
+  display: grid;
+  gap: 1rem;
+}
+
+.calculator div {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.calculator label {
+  flex: 0 1 120px;
+  font-weight: 600;
+}
+
+.calculator input {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  outline-color: #555;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.calculator select {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  outline-color: #555;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.calculator button {
+  width: 50%;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  background: #00a1a3;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.calculator button[type="reset"] {
+  background: #444;
+}
+
+.calculator button:hover {
+  filter: brightness(120%);
+}
+
+.output {
+  text-align: center;
+}
+
+.output #bmi {
+  font-size: 4rem;
+}
+
+.output #desc strong {
+  text-transform: uppercase;
+}
+
+.bmi-scale {
+  display: flex;
+}
+
+.bmi-scale div {
+  flex: 1;
+  text-align: center;
+  text-transform: uppercase;
+  border-top: 5px solid var(--color);
+  padding: 10px;
+  font-size: 0.9rem;
+}
+
+.bmi-scale h4 {
+  font-size: 0.8rem;
+  color: slategray;
+}
+
+.underweight {
+  color: var(--underweight);
+}
+
+.healthy {
+  color: var(--normal);
+}
+
+.overweight {
+  color: var(--overweight);
+}
+
+.obese {
+  color: var(--obese);
+}
+</style>
 <body>
 
     <!-- HEADER -->
     <header>
 
-        <nav class="navbar  navbar-expand-lg navbar-light primary-500-bg">
+        <nav class="navbar navbar-expand-lg navbar-light primary-500-bg">
             <a class="navbar-brand" href="/index.html">
-                <img src="./img/logo-official-removebg-preview.png" alt="" class="img-fluid"
-                    style="width: 200px; padding-left: 20px; height: 70px;">
+                <img src="./logoGss-removebg-preview.png" alt="" class="img-fluid"
+                    style="width: 200px; padding-left: 20px; height: 100px;">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="padding-right: 100px;">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav flex-wrap">
                     <li class="nav-item active">
                         <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500"
                             href="/index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500"
-                            href="/pages/about-us.html">About
-                            Us</a>
+                            href="/pages/about-us.html">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500"
-                            href="/pages/gallery.html">gallery</a>
+                            href="/pages/sehat fisik.html">Kombinasi 5S</a>
                     </li>
                     <li class="nav-item">
                         <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500"
-                            href="/pages/leaderboards.html">Leaderboards</a>
+                            href="/pages/gallery.html">Article</a>
                     </li>
                     <li class="nav-item">
-                        <a style="padding-right: 20px; font-size: 1.3em;" class="nav-link secondary-500"
-                            href="/pages/learning-material.html">Learning Material</a>
+                        <a style="padding-right: 20px; font-size: 1.3em" class="nav-link secondary-500"
+                            href="/pages/leaderboards.html">Tips dan Pencegahan</a>
                     </li>
                 </ul>
             </div>
         </nav>
         <!-- JUMBOTRON -->
-        <div class="jumbotron jumbotron-fluid">
-            <img src="img/Thumbnail.jpeg" alt="" class="img-fluid" style="width:100%">
-            <div class="position-absolute" style="bottom: 200px ; left: 10px ;">
-                <img src="img/Title Tepdev.png" alt="" class="img-fluid" style="width: 25%">
-                <div class="position-absolute" style="bottom: -25px ; left: 50px ;">
-                    <h5 class="secondary-500">"Empowering Futures, Igniting Minds: <br> Visioner Technology
-                        Extracurricular - Where Innovation Meets Imagination!"</h5>
-                </div>
-            </div>
+        <div class="container mt-3">
+              <img src="/img/home.png" alt="" style="width: 100%; padding-top: 112px; padding-bottom: 10px;">
         </div>
+          
     </header>
-
+<div class="Kombinasi">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card text-center">
+            <img src="/img/fisik.png" class="card-img-top" alt="...">
+            <div class="card-body"> 
+              <a href="/pages/sehat fisik.html">
+                <h4 class="card-title">Sehat Fisik</h4>
+            </a>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card text-center">
+            <img src="/img/gizi.png" class="card-img-top" alt="...">
+            <div class="card-body">
+             <a href="/pages/sehat gizi.html">
+                <h4 class="card-title">Sehat Gizi</h4>
+             </a>
+            </div>
+          </div>
+        </div> 
+        <div class="col">
+          <div class="card text-center">
+            <img src="/img/imunisasi.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <a href="/pages/sehat imunisasi.html">
+                    <h4 class="card-title">Sehat Imnunisasi</h4>
+                 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6 mb-3 mb-sm-0">
+          <div class="card text-center" style="padding-right: 50px;">
+            <img src="/sehat jiwa.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <a href="/pages/sehat jiwa.html.html">
+                    <h4 class="card-title">Sehat Jiwa</h4>
+                 </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="card text-center">
+            <img src="/img/lingkungan.png" class="card-img-top" alt="...">
+            <div class="card-body">
+                <a href="/pages/Sehat lingkungan.html.html">
+                    <h4 class="card-title">Sehat Lingkungan</h4>
+                 </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- bmi -->
+    <section class="grad p-3">
+            <div class="container-bmi">
+              <h1 class="h1-bmi">Kalkulator BMI</h1>
+        
+              <form class="calculator">
+                <div>
+                  <label for="weight">Berat badan (kg)</label>
+                  <input type="number" id="weight" min="0" step="0.01" value="0" />
+                </div>
+        
+                <div>
+                  <label for="height">Tinggi (cm)</label>
+                  <input type="number" id="height" min="0" step="0.01" value="0" />
+                </div>
+        
+                <div>
+                  <label for="label">Jenis Kelamin</label>
+                        <select type="input" id="gender" required>
+                            <option value="">Pilih Jenis Kelamin</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                </div>
+        
+                <div>
+                  <button type="reset">Cek ulang</button>
+                  <button type="submit">Hitung BMI</button>
+                </div>
+              </form>
+        
+              <section class="output">
+                <h3>hasil BMI</h3>
+                <p id="bmi">0</p>
+                <p id="desc"></p>
+              </section>
+        
+              <section class="bmi-scale">
+                <div style="--color: var(--underweight)">
+                  <h4>Berat rendah</h4>
+                  <p>&lt; 18.5</p>
+                </div>
+        
+                <div style="--color: var(--normal)">
+                  <h4>Berat Normal</h4>
+                  <p>18.5 – 25</p>
+                </div>
+        
+                <div style="--color: var(--overweight)">
+                  <h4>Berat Berlebih</h4>
+                  <p>25 – 30</p>
+                </div>
+        
+                <div style="--color: var(--obese)">
+                  <h4>Berat Obeseitas</h4>
+                  <p>≥ 30</p>
+                  
+                </div>
+              </section>
+            </div>
+    </section>
     <!-- hasil divisi -->
     <section>
         <section class="fortiary-500-bg " style="padding-top: 30px4;">
@@ -157,7 +412,6 @@
             &nbsp;
         </section>
     </section>
-
     <!-- FOOTER -->
     <footer>
         <div class="container-fluid bg-black" style="color: aliceblue;">
@@ -190,5 +444,51 @@
     </footer>
 
 </body>
+<!-- import js -->
+<script>
+    const bmiText = document.getElementById("bmi");
+    const descText = document.getElementById("desc");
+    const form = document.querySelector("form");
 
+    form.addEventListener("submit", onFormSubmit);
+    form.addEventListener("reset", onFormReset);
+
+    function onFormReset() {
+    bmiText.textContent = 0;
+    bmiText.className = "";
+    descText.textContent = "N/A";
+    }
+
+    function onFormSubmit(e) {
+    e.preventDefault();
+
+    const weight = parseFloat(form.weight.value);
+    const height = parseFloat(form.height.value);
+
+    if (isNaN(weight) || isNaN(height) || weight <= 0 || height <= 0) {
+        alert("Please enter a valid weight and height");
+        return;
+    }
+
+    const heightInMeters = height / 100; // cm -> m
+    const bmi = weight / Math.pow(heightInMeters, 2);
+    const desc = interpretBMI(bmi);
+
+    bmiText.textContent = bmi.toFixed(2);
+    bmiText.className = desc;
+    descText.innerHTML = `You are <strong>${desc}</strong>`;
+    }
+
+    function interpretBMI(bmi) {
+    if (bmi < 18.5) {
+        return "underweight";
+    } else if (bmi < 25) {
+        return "healthy";
+    } else if (bmi < 30) {
+        return "overweight";
+    } else {
+        return "obese";
+    }
+    }
+</script>
 </html>
