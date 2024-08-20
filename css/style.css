@@ -27,23 +27,6 @@ p {
     font-family: "Bai Jamjuree";
 
 }
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table,
-th,
-td {
-    border: 1px solid black;
-}
-
-th,
-td {
-    padding: 10px;
-    text-align: center;
-}
 a {
     text-decoration: none;
 }
@@ -54,21 +37,6 @@ p {
 
 /* Style the first row differently, e.g., with a background color */
 
-tr:first-child {
-    background-color: #eee;
-}
-
-.column {
-    padding-bottom: 20%;
-}
-
-.table {
-    padding-top: 2%;
-}
-
-.judul {
-    background-color: #164863;
-}
 
 
 /* COLOR SYSTEM */
@@ -81,18 +49,18 @@ tr:first-child {
 }
 
 .primary-500-bg {
-    background-color: #164863 !important;
+    background-color: #84bc75 !important;
 }
 
 
 /* SECONDARY */
 
 .secondary-500 {
-    color: #DDF2FD !important;
+    color: #fff !important;
 }
 
 .secondary-500-bg {
-    background-image: linear-gradient(#C6EBC5, #FEFDED); 
+    background-image: linear-gradient(#6abe67, #FEFDED); 
 }
 
 
@@ -103,18 +71,18 @@ tr:first-child {
 }
 
 .tertiary-500-bg {
-    background-color: #427D9D !important;
+    background-color: #94b48b !important;
 }
 
 
 /* FORTIARY */
 
 .fortiary-500 {
-    color: #427D9D !important;
+    color: #f1ecd9 !important;
 }
 
 .fortiary-500-bg {
-    background-color: #427D9D !important;
+    background-color: #7ca760 !important;
 }
 
 .foto-1 {
@@ -144,5 +112,5 @@ tr:first-child {
     z-index: 1000; /* to ensure it's on top of other elements */
   }
   nav {
-    background-image: linear-gradient(#2a943b, #c4d5df);
+    background-image: linear-gradient(#5bb169, #e9ffd5);
  }
